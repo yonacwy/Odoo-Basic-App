@@ -92,6 +92,10 @@
                             <field name="amount" widget="monetary"/>
                             <field name="year"/>
                             <field name="is_blood_donar"/>
+                            <field name="blood_group" 
+                              invisible="is_blood_donar != 'True'"/>
+                            <field name="birthday" 
+                              invisible="is_blood_donar != 'True'"/>
                         </group>
                         <group>
                             <field name="note"/>
