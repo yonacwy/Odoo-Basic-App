@@ -61,7 +61,59 @@
             </field>
         </record>
     
-
+        <!-- Form View -->
+        <record id="my_model_name_form_view" model="ir.ui.view">
+            <field name="name">my.model.name.form.view</field>
+            <field name="model">my.model.name</field>
+            <field name="priority" eval="7"/>
+            <field name="arch" type="xml">
+                <form string="Model Name">
+                    <header>
+                        <field name="active" invisible="1"/>
+                        <button type="object"
+                            class="oe_highlight"
+                            string="Update Data"
+                            name="action_update_data_wizard"/>
+                        </header>
+                    <sheet>
+                        <h3>
+                            <label for="name" string="Name"/><br/>
+                            <field name="name"/>
+                        </h3>
+                        <group name="section_name" string="Section Name">
+                            <group>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="photo" widget="image" class="oe_avatar oe_right" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group name="section_name_2" string="Section Name 2" col="4">
+                            <field name="amount" widget="monetary"/>
+                            <field name="year"/>
+                            <field name="is_blood_donar"/>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                        <group name="section_name_3" string="Section Name 3">
+                            <field name="my_model_name_line_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name" required="True"/>
+                                    <field name="amount"/>
+                                    <field name="company_id" options="{'no_quick_create':True, 'no_create_edit':True}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+    
         <!-- Action -->
         <record id="action_my_model_name_view" model="ir.actions.act_window">
             <field name="name">My Model Name</field>
