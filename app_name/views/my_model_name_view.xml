@@ -71,9 +71,10 @@
                     <header>
                         <field name="active" invisible="1"/>
                         <button type="object"
-                            class="oe_highlight"
-                            string="Update Data"
-                            name="action_update_data_wizard"/>
+                               class="oe_highlight"
+                              string="Update Data"
+                                name="action_update_data_wizard"
+                             visible="active != 'True'"/>
                         </header>
                     <sheet>
                         <h3>
