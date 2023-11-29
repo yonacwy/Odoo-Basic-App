@@ -58,6 +58,8 @@ Only major thing missing in this version 17.0 is the form view had to remove it 
 
 Error:Usage of attributes attrs and states are not supported from Odoo 17.0 onwards. 
 
-Added the form view back and just deleted the attrs fields, its working. 
+Added the form view back and just deleted the attrs fields, its working.
+
+Fixed the form view in my_model_name_view.xml, working much better.
 
 
